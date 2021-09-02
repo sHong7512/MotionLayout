@@ -3,6 +3,7 @@ package com.shong.motionlayout
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.constraintlayout.motion.widget.MotionLayout
 import kotlinx.coroutines.*
 
@@ -38,6 +39,10 @@ class SplashActivity : AppCompatActivity() {
 //            finish()
             motionLayout.transitionToState(R.id.startLogin)
             motionLayout.transitionToStart()
+        }
+
+        findViewById<Button>(R.id.loginButton).setOnClickListener {
+            startActivity(Intent(this@SplashActivity, MainActivity::class.java))
         }
 
     }
