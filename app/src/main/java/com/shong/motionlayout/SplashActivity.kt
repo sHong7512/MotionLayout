@@ -30,13 +30,16 @@ class SplashActivity : AppCompatActivity() {
 
         })
 
+        findViewById<Button>(R.id.loginButton).setOnClickListener {
+            startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+            finish()
+        }
+
         CoroutineScope(Dispatchers.Main).launch {
             while (true) {
                 if (!isOk) delay(500L)
                 else break
             }
-//            startActivity(Intent(this@SplashActivity, MainActivity::class.java))
-//            finish()
             motionLayout.transitionToState(R.id.startLogin)
             motionLayout.transitionToStart()
         }

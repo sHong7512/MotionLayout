@@ -112,5 +112,12 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
+        <Button
+            android:id="@+id/deltaButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="deltaRelative Motion Go"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </com.shong.motionlayout.DrawerContent>
